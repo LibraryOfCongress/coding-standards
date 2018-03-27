@@ -1,0 +1,10 @@
+#element-id {
+    display: grid;
+}
+
+.a,
+.b,
+.c,
+#d {
+    display: none;
+}
