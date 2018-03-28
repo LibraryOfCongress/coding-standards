@@ -1,4 +1,6 @@
 codequality:
+  tags:
+    - docker
   image: docker:latest
   variables:
     DOCKER_DRIVER: overlay
