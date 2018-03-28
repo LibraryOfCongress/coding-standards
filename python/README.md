@@ -5,6 +5,8 @@
 
 ## Tools
 
+### Code Style
+
 It is strongly recommended that you use `isort` and some combination of `flake8`
 and `autopep8` for consistency:
 
@@ -35,6 +37,16 @@ namespace:
     [isort]
     default_section=THIRDPARTY
     known_first_party=my_project_name
+
+### Package Management
+
+To meet our security goals, it is recommended that you enable Pip's
+[hash-checking mode](https://pip.pypa.io/en/stable/reference/pip_install/#hash-checking-mode).
+This can be done using a tool such as [hashin](https://pypi.python.org/pypi/hashin)
+which updates requirements files or a tool such as
+[pipenv](https://pypi.python.org/pypi/pipenv) which includes a superset of that
+functionality. The important part is ensuring that version numbers are pinned
+for repeatable builds and corrupted packages will be quickly detected.
 
 ## Upgrading to Python 3
 
