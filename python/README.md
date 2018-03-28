@@ -3,16 +3,12 @@
 * PEP-8 with the following customizations:
     * Max line length 110 to avoid penalizing explanatory variable names
 
-# Tools
+## Tools
 
-The provided `setup.cfg` file supports these tools to maintain code-quality —
-simply add or merge it into your project's top-level `setup.cfg` and install
-the tools discussed below:
+It is strongly recommended that you use `isort` and some combination of `flake8`
+and `autopep8` for consistency:
 
     pip install flake8 isort autopep8
-
-Use of these tools is strongly recommended and they have excellent support in
-modern editors:
 
 * `flake8`: audits for a number of style and correctness problems using PyFlakes
   and pycodestyle
@@ -21,6 +17,24 @@ modern editors:
   should be run on every file before commiting it.
 * `autopep8` is used to apply many PEP-8 changes automatically. Since some
   changes may have multiple acceptable options human review is recommended.
+
+We are intentionally leaving both with their default configuration —
+`.editorconfig` will be honored for indentation and whitespace — but if your
+project has local deviations from PEP-8 you can create a top-level `setup.cfg`
+file with local configuration. For example, if you wanted to relax the maximum
+line length requirement this value would affect both `flake8`'s reports and
+`autopep8`'s formatting:
+
+    [pycodestyle]
+    max-line-length=110
+
+Similarly, `isort` can also be configured using `setup.cfg` — in this example,
+to change the default section for unknown libraries or to add a known first-part
+namespace:
+
+    [isort]
+    default_section=THIRDPARTY
+    known_first_party=my_project_name
 
 ## Upgrading to Python 3
 
