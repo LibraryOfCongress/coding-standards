@@ -25,6 +25,19 @@ Pretter honors the top-level `.editorconfig` so the provided [`.prettierrc`](.pr
 * Favoring [single quotes](https://prettier.io/docs/en/options.html#quotes)
 * Not adding [spaces around brackets in object literals](https://prettier.io/docs/en/options.html#bracket-spacing)
 
+## Linting
+
+The provided [`.eslintrc.yaml`](.eslintrc.yaml) configures ESLint using the
+Prettier plugin for consistency. You can enable this for your projects or
+globally using either NPM or yarn:
+
+    npm add --only=dev prettier eslint eslint-plugin-prettier
+    yarn add --dev prettier eslint eslint-plugin-prettier
+
+The provided configuration is intentionally limited to the most basic ESLint
+recommended defaults. Please consider the long-term maintenance cost of any
+changes.
+
 # Dialects
 
 (Something TBD about use of vanilla JS, transpiled modern to ES5/6, etc.)
