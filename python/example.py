@@ -15,7 +15,9 @@ print({'but all keys': 'and values',
        'should be indented': 'at the same level'})
 
 print({
-    'this key is really long and the value is even worse': 'so it should not be on a single line',
-    'plus there is more than one value': 'and we do not want to pack more than one assignment onto a'
-                                         ' single line'
+    'this key is really long and the value is even worse':
+        'so it should not be on a single line',
+    'plus there is more than one value':
+        'and we do not want to pack more than one assignment onto a'
+        ' single line'
 })
