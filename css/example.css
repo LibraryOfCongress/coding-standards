@@ -8,3 +8,10 @@
 #d {
     display: none;
 }
+
+#foo {
+    display: none;
+
+    /* This will trigger a stylelint error: */
+    made-up: bogus;
+}
