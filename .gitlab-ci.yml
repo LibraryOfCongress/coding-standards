@@ -8,14 +8,8 @@ codequality:
     - docker:dind
   before_script:
     - docker info
-  script:
     - docker pull acdha/flake8-codeclimate
-    - export SP_VERSION=$(echo "$CI_SERVER_VERSION" | sed 's/^\([0-9]*\)\.\([0-9]*\).*/\1-\2-stable/')
-    - docker run \
-      --rm \
-      --env SOURCE_CODE="$PWD" \
-      --volume "$PWD":/code \
-      --volume /var/run/docker.sock:/var/run/docker.sock \
-      flake8-codeclimate > codeclimate.json
+  script:
+    - docker run --rm --volume "$PWD":/code acdha/flake8-codeclimate /code > codeclimate.json || true
   artifacts:
     paths: [codeclimate.json]
