@@ -44,8 +44,9 @@ for consistency, and [`flake8`][flake8] to catch a variety of errors:
 *   [`isort`][isort] is used to sort imports into three sections (stdlib, third-party,
     first-party) with names sorted alphabetically and is highly reliable. It
     should be run on every file before committing.
-*   [`black`][black] will safely apply consistent formatting to your Python code and
-    should be run on every file before committing. Note that while Black only runs on Python 3, it can format Python 2 code when it does so.
+*   [`black`][black] will safely apply consistent formatting to your Python code
+    and should be run on every file before committing. Note that while Black
+    only runs on Python 3, it can format Python 2 code when it does so.
 
 We are intentionally leaving both with their default configuration —
 `.editorconfig` will be honored for indentation and whitespace — but if your
