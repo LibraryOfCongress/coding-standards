@@ -9,7 +9,7 @@ installation instructions](https://prettier.io/docs/en/install.html) with a
 global install using either NPM or Yarn:
 
     npm install --global prettier
-    yarn add --global prettier
+    yarn global add prettier
 
 ## Linting
 
