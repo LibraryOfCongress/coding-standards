@@ -12,10 +12,17 @@ projects in all languages:
 * UTF-8 encoding
 * Unix line-termination
 * Spaces for indentation with a tab size of 4
-* Trailing whitespace is automatically trimmed (this will avoid Git highlighting extra whitespace)
+* Trailing whitespace is automatically trimmed (this will avoid Git highlighting
+  extra whitespace)
 
 Just copy it into your project's root directory and if your editor doesn't have
 native support install the plugin: http://editorconfig.org/#download
+
+# Language-Specific Configuration
+
+Each language has a subdirectory which contains a README file with instructions
+for the tools and conventions popular in that language. For example, Python
+tooling will be built around PEP-8 but Java will reasonably differ.
 
 # General Policies
 
@@ -41,9 +48,3 @@ which does not cleanly package its code, third-party code should be stored in a
 `vendor` or `external` directory in a directory which contains both the code and
 a README or LICENSE file providing context and making it clear that the Library
 is not claiming ownership of the code in question.
-
-# Language-Specific Configuration
-
-Each language has a subdirectory which contains a README file with instructions
-for the tools and conventions popular in that language. For example, Python
-tooling will be built around PEP-8 but Java will reasonably differ.
