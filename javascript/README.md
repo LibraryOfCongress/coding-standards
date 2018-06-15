@@ -15,7 +15,8 @@ using either NPM or Yarn:
 a Mac or Linux system)
 
 Once you have it installed, you can reformat JavaScript, CSS, SCSS/LESS, etc.
-from the shell:
+from the shell using e.g. `yarn run prettier`, `npm run prettier`, or simply
+`prettier` if your PATH includes the install directory:
 
 ```bash
 $ prettier --write /path/to/my.js

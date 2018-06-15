@@ -8,8 +8,23 @@ reasonable. The easiest way to start using Prettier is to follow the [official
 installation instructions](https://prettier.io/docs/en/install.html) with a
 global install using either NPM or Yarn:
 
-    npm install --global prettier
     yarn global add prettier
+    npm install --global prettier
+
+Once you have it installed, you can reformat JavaScript, CSS, SCSS/LESS, etc.
+from the shell using e.g. `yarn run prettier`, `npm run prettier`, or simply
+`prettier` if your PATH includes the install directory:
+
+```bash
+$ prettier --write example.css
+example.css 81ms
+✨  Done in 0.32s.
+```
+
+[Many editors](https://prettier.io/docs/en/editors.html) and build tools have
+integrated support and it's highly recommended that you enable it as a
+format-on-save action in your editor or a Git [`pre-commit`
+hook](https://prettier.io/docs/en/precommit.html).
 
 ## Linting
 
