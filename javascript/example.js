@@ -1,6 +1,6 @@
 var foo = [1, 2, 3];
 
-var bar = 'foobar';
+var bar = "foobar";
 
 var baaz = {
     foo: bar,
@@ -22,7 +22,7 @@ var dupFoo = 1,
 
 class Foo {
     bar(x) {
-        return 'Called with x=' + x;
+        return "Called with x=" + x;
     }
 }
 

@@ -31,10 +31,19 @@ hook](https://prettier.io/docs/en/precommit.html).
 ### Prettier Configuration
 
 Pretter honors the top-level `.editorconfig` so the provided
-[`.prettierrc`](.prettierrc) sets only two options:
+[`.prettierrc.yaml`](.prettierrc.yaml) sets only one option:
 
--   Favoring [single quotes](https://prettier.io/docs/en/options.html#quotes)
 -   Not adding [spaces around brackets in object literals](https://prettier.io/docs/en/options.html#bracket-spacing)
+
+Because the JavaScript community is roughly evenly split in preference for
+single or double quotes, we consider either to be acceptable as long as your
+Prettier configuration matches the project's convention. By default Prettier
+uses double quotes so if you prefer single quotes make sure to set the
+[`singleQuote` option](https://prettier.io/docs/en/options.html#quotes):
+
+```yaml
+singleQuote: true
+```
 
 ## Linting
 
