@@ -7,18 +7,20 @@ var baaz = {
     quux: foo + bar
 };
 
+let quux = { foo: 1, bar: 2 };
+
 function foobar() {
     return bar;
 }
 
-let quux = () => {
+let quuxFunction = () => {
     foobar;
 };
 
 // Add a multi-line declaration to demonstrate ESLint rules:
 var dupFoo = 1,
     dupBar = baaz,
-    dupBaaz = quux;
+    dupBaaz = quuxFunction(quux);
 
 class Foo {
     bar(x) {
