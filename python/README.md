@@ -1,6 +1,6 @@
 # Python conventions
 
-*   PEP-8, optionally relaxing the line-length slightly to allow for more
+-   PEP-8, optionally relaxing the line-length slightly to allow for more
     verbose variable names.
 
     The [Black][black] code formatter has a good discussion about the merits of
@@ -22,7 +22,7 @@
 
     http://black.readthedocs.io/en/latest/the_black_code_style.html#line-length
 
-*   Note that PEP-8 changed the rules regarding line breaks around binary
+-   Note that PEP-8 changed the rules regarding line breaks around binary
     operators to match the style which several of our projects had already been
     using, which means that it will soon no longer be necessary to disable
     flake8's W503 warning:
@@ -39,12 +39,12 @@ for consistency, and [`flake8`][flake8] to catch a variety of errors:
 
     pip install flake8 isort black
 
-*   [`flake8`][flake8] audits for a number of style and correctness problems using PyFlakes
+-   [`flake8`][flake8] audits for a number of style and correctness problems using PyFlakes
     and pycodestyle
-*   [`isort`][isort] is used to sort imports into three sections (stdlib, third-party,
+-   [`isort`][isort] is used to sort imports into three sections (stdlib, third-party,
     first-party) with names sorted alphabetically and is highly reliable. It
     should be run on every file before committing.
-*   [`black`][black] will safely apply consistent formatting to your Python code
+-   [`black`][black] will safely apply consistent formatting to your Python code
     and should be run on every file before committing. Note that while Black
     only runs on Python 3, it can format Python 2 code when it does so.
 
@@ -90,13 +90,13 @@ http://python-future.org/futurize.html#forwards-conversion-stage1
 
 ### Opt-ing In to the future on Python 2
 
-*   Files begin with `# encoding: utf-8`
-*   `from __future__ import absolute_import, division, print_function` is used to
+-   Files begin with `# encoding: utf-8`
+-   `from __future__ import absolute_import, division, print_function` is used to
     enable the Python 3 behaviours. `unicode_literals` is not used because
     encoding handling can require more preparation but it is important to use the
     `u` literal prefix for text and `b` for bytes so tools know which will require
     encoding.
-*   Use of the newer `io` imports (Python 2.6+) avoids needing conditional imports
+-   Use of the newer `io` imports (Python 2.6+) avoids needing conditional imports
     or use of different code paths. For example, instead of conditionally using
     `open(…, encoding="utf-8")` on Python 3 and `codecs.open(…, encoding="utf-8")`
     on Python 2, use `io` for both:
