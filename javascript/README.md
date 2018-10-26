@@ -30,10 +30,10 @@ hook](https://prettier.io/docs/en/precommit.html).
 
 ### Prettier Configuration
 
-Pretter honors the top-level `.editorconfig` so the provided
-[`.prettierrc.yaml`](.prettierrc.yaml) sets only one option:
-
--   Not adding [spaces around brackets in object literals](https://prettier.io/docs/en/options.html#bracket-spacing)
+Pretter honors the top-level `.editorconfig`. We are intentionally not otherwise
+configuring it because the defaults reflect a reasonably broad portion of the
+JavaScript community and there is value in not having to manage or upgrade
+configuration.
 
 Because the JavaScript community is roughly evenly split in preference for
 single or double quotes, we consider either to be acceptable as long as your
