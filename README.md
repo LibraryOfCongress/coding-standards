@@ -50,6 +50,21 @@ Where possible, configure tools to use `.editorconfig` rather than duplicating
 configuration in other files to avoid needing to synchronize customizations or
 exceptions.
 
+# General Practices
+
+-   We strongly recommend the use of version control hooks and continuous
+    integration tests for any change which can be made or tested automatically.
+    This repository uses [`pre-commit`](https://pre-commit.com/) to manage Git
+    pre-commit hooks for several languages. This makes it simple to setup a new
+    copy of the repository by running `pre-commit install` after the first
+    checkout to ensure that all subsequent commits will be reformatted and
+    validated automatically, and CI tools can use `pre-commit run` to run all of
+    the configured hooks during the build process as well.
+
+    There are a number of similar tools which provide equivalent functionality. In
+    accordance with the [philosophy](#Philosophy) above, consistency is more
+    important than any particular tool — the important part is that it's run
+    regularly by everyone on a team and that the results are consistent.
 
 # Language-Specific Configuration
 
