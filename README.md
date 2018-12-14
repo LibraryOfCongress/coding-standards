@@ -9,11 +9,11 @@ The top-level `.editorconfig` file is [Editor Config](http://editorconfig.org/)
 intended to set basic editor defaults which are intended to be suitable for all
 projects in all languages:
 
-* UTF-8 encoding
-* Unix line-termination
-* Spaces for indentation with a tab size of 4
-* Trailing whitespace is automatically trimmed (this will avoid Git highlighting
-  extra whitespace)
+-   UTF-8 encoding
+-   Unix line-termination
+-   Spaces for indentation with a tab size of 4
+-   Trailing whitespace is automatically trimmed (this will avoid Git highlighting
+    extra whitespace)
 
 Just copy it into your project's root directory and if your editor doesn't have
 native support install the plugin: http://editorconfig.org/#download
@@ -45,6 +45,6 @@ allowed to do so.
 
 If there is a good reason why this cannot be done, such as an upstream project
 which does not cleanly package its code, third-party code should be stored in a
-`vendor` or `external` directory in a directory which contains both the code and
-a README or LICENSE file providing context and making it clear that the Library
-is not claiming ownership of the code in question.
+`vendor` directory in a directory which contains both the code and a README or
+LICENSE file providing context and making it clear that the Library is not
+claiming ownership of the code in question.
