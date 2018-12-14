@@ -1,9 +1,37 @@
-# Coding Standards
+# Code Style Guide
 
 This is a common baseline for coding standards suitable for all LC projects and
-is intended to avoid opinionated issus where various projects will reasonably
-disagree. Only standards which can be enforced or applied by tools are included
-— policies which require human judgement are out of scope for this project.
+is intended to avoid picking sides in opinionated issus where many projects will
+reasonably disagree.
+
+## Philosophy
+
+### Goals
+
+1. Reduce noise in commits, code-review, etc.
+1. Make it easier for unfamiliar developers to participate
+1. Provide immediate feedback to avoid extending the development cycle
+
+### Anti-goals
+
+1. Creating second jobs: rely on automation rather than asking humans to behave
+   like robots
+1. Picking sides in industry-wide debates
+
+All of the recommendations in this project have been focused on providing a high
+benefit-to-argument ratio. When in doubt, the most important guideline is to
+follow the spirit of the goals rather than any particular suggestion — for
+example, if a particular project uses an open-source framework which has an
+existing style guide it is almost certainly better to follow the community
+practice where it conflicts with our generic guidance since that will be the
+most familiar to developers proficient with that tool.
+
+In the spirit of the first anti-goal, we also strongly recommend relying on
+automation where possible. It matters far less whether you use 2 or 4 spaces to
+indent if your editor and other tools apply that every time you hit save because
+the cost of following it is effectively nil.
+
+# How this project is organized
 
 The top-level `.editorconfig` file is [Editor Config](http://editorconfig.org/)
 intended to set basic editor defaults which are intended to be suitable for all
@@ -15,14 +43,21 @@ projects in all languages:
 -   Trailing whitespace is automatically trimmed (this will avoid Git highlighting
     extra whitespace)
 
-Just copy it into your project's root directory and if your editor doesn't have
-native support install the plugin: http://editorconfig.org/#download
+Just copy it into your project's root directory and, if your editor doesn't have
+native support, [check for a plugin](http://editorconfig.org/#download).
+
+Where possible, configure tools to use `.editorconfig` rather than duplicating
+configuration in other files to avoid needing to synchronize customizations or
+exceptions.
+
 
 # Language-Specific Configuration
 
 Each language has a subdirectory which contains a README file with instructions
 for the tools and conventions popular in that language. For example, Python
-tooling will be built around PEP-8 but Java will reasonably differ.
+tooling will assume PEP-8 but Java will reasonably differ — as always, the most
+important thing is to have convention implemented by tooling rather than prose
+so it will be consistently applied.
 
 # General Policies
 
