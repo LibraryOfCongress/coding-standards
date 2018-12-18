@@ -48,18 +48,19 @@ for consistency, and [`flake8`][flake8] to catch a variety of errors:
     and should be run on every file before committing. Note that while Black
     only runs on Python 3, it can format Python 2 code when it does so.
 
-We are intentionally leaving both with their default configuration —
-`.editorconfig` will be honored for indentation and whitespace — but if your
-project has local deviations from PEP-8 you can create a top-level `setup.cfg`
-file with local configuration. For example, if you wanted to relax the maximum
-line length requirement this value would affect [`flake8`][flake8]'s reports:
+Since all of these tools honor `.editorconfig` we are avoiding duplicating the
+indentation and whitespace settings in the other tools.
 
-    [pycodestyle]
-    max-line-length=110
+Additional configuration for tools should be stored in tool-specific files (e.g.
+`.isort.cfg` or `.flake8`) or collected in a top-level `setup.cfg` but not both
+to avoid needing to synchronize updates.
 
-Similarly, [`isort`][isort] can also be configured using `setup.cfg` — in this example,
-to change the default section for unknown libraries or to add a known first-part
-namespace:
+For convenience, this repository has examples which follow Black's conventions
+for formatting and line-length (88 vs. 80 characters). These are intended as a
+starting point for other project-level customization — for example,
+[`isort`][isort] can be configured to change the default section for unknown
+libraries or to add a known first-part namespace following the PEP-8
+recommendations:
 
     [isort]
     default_section=THIRDPARTY
