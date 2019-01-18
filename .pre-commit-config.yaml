@@ -1,14 +1,25 @@
 repos:
     - repo: https://github.com/ambv/black
-      rev: stable
+      rev: 18.9b0
       hooks:
           - id: black
     - repo: https://github.com/pre-commit/pre-commit-hooks
-      rev: v2.0.0
+      rev: v2.1.0
       hooks:
+          - id: check-byte-order-marker
+          - id: trailing-whitespace
+          - id: mixed-line-ending
+            args: ["--fix=lf"]
+          - id: check-merge-conflict
           - id: flake8
+          - id: check-json
+          - id: check-yaml
+          - id: detect-aws-credentials
+          - id: detect-private-key
+          - id: pretty-format-json
+            args: ["--autofix", "--no-sort-keys", "--indent=4"]
     - repo: https://github.com/prettier/prettier
-      rev: 1.14.3
+      rev: 1.15.3
       hooks:
           - id: prettier
             files: \.(css|less|scss|ts|tsx|graphql|gql|json|js|jsx|md)$
