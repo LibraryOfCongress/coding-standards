@@ -1,8 +1,8 @@
 # Code Style Guide
 
 This is a common baseline for coding standards suitable for all LC projects and
-is intended to avoid picking sides in opinionated issus where many projects will
-reasonably disagree.
+is intended to avoid policies where many projects will reasonably disagree based
+on different needs and environments.
 
 ## Philosophy
 
@@ -14,9 +14,9 @@ reasonably disagree.
 
 ### Anti-goals
 
-1. Creating second jobs: rely on automation rather than asking humans to behave
-   like robots
-1. Picking sides in industry-wide debates
+1. Creating second jobs: we will rely on automation rather than asking humans to
+   behave like robots
+1. Picking sides in industry-wide debates without a strong consensus position
 
 All of the recommendations in this project have been focused on providing a high
 benefit-to-argument ratio. When in doubt, the most important guideline is to
@@ -26,10 +26,11 @@ existing style guide it is almost certainly better to follow the community
 practice where it conflicts with our generic guidance since that will be the
 most familiar to developers proficient with that tool.
 
-In the spirit of the first anti-goal, we also strongly recommend relying on
-automation where possible. It matters far less whether you use 2 or 4 spaces to
-indent if your editor and other tools apply that every time you hit save because
-the cost of following it is effectively nil.
+In the spirit of the first anti-goal we strongly recommend relying on automation
+where possible. It matters far less whether you use 2 or 4 spaces to indent if
+your editor and other tools consistently follow that setting because the cost of
+following it is effectively nil if it happens automatically every time you hit
+save.
 
 # How this project is organized
 
@@ -40,8 +41,8 @@ projects in all languages:
 -   UTF-8 encoding
 -   Unix line-termination
 -   Spaces for indentation with a tab size of 4
--   Trailing whitespace is automatically trimmed (this will avoid Git highlighting
-    extra whitespace)
+-   Trailing whitespace is automatically trimmed (this will avoid Git
+    highlighting extra whitespace and extra merge conflicts)
 
 Just copy it into your project's root directory and, if your editor doesn't have
 native support, [check for a plugin](http://editorconfig.org/#download).
@@ -61,18 +62,17 @@ exceptions.
     validated automatically, and CI tools can use `pre-commit run` to run all of
     the configured hooks during the build process as well.
 
-    There are a number of similar tools which provide equivalent functionality. In
-    accordance with the [philosophy](#Philosophy) above, consistency is more
-    important than any particular tool — the important part is that it's run
-    regularly by everyone on a team and that the results are consistent.
+    There are a number of similar tools which provide equivalent functionality.
+    In accordance with the [philosophy](#Philosophy) above, consistency is more
+    important than any particular tool: the part which matters most is that it's
+    run regularly by everyone on a team with identical results.
 
 # Language-Specific Configuration
 
 Each language has a subdirectory which contains a README file with instructions
 for the tools and conventions popular in that language. For example, Python
 tooling will assume PEP-8 but Java will reasonably differ — as always, the most
-important thing is to have convention implemented by tooling rather than prose
-so it will be consistently applied.
+important thing is consistency.
 
 # General Policies
 
