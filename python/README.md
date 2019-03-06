@@ -20,7 +20,7 @@
     > Long lines also make it harder to present code neatly in documentation or
     > talk slides.
 
-    http://black.readthedocs.io/en/latest/the_black_code_style.html#line-length
+    https://black.readthedocs.io/en/latest/the_black_code_style.html#line-length
 
 -   Note that PEP-8 changed the rules regarding line breaks around binary
     operators to match the style which several of our projects had already been
@@ -87,7 +87,7 @@ convert many codebases. It is highly recommended to follow the staged conversion
 process described in the documentation to perform the safest bulk updates first
 before making changes which may require more review:
 
-http://python-future.org/futurize.html#forwards-conversion-stage1
+https://python-future.org/futurize.html#forwards-conversion-stage1
 
 ### Opt-ing In to the future on Python 2
 
@@ -108,7 +108,7 @@ http://python-future.org/futurize.html#forwards-conversion-stage1
     open(filename, encoding='utf-8')
     ```
 
-    See http://python-future.org/compatible_idioms.html#file-io-with-open
+    See https://python-future.org/compatible_idioms.html#file-io-with-open
 
 [black]: https://pypi.python.org/pypi/black
 [flake8]: https://pypi.python.org/pypi/flake8

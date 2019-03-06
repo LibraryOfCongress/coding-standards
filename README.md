@@ -34,7 +34,7 @@ save.
 
 # How this project is organized
 
-The top-level `.editorconfig` file is [Editor Config](http://editorconfig.org/)
+The top-level `.editorconfig` file is [Editor Config](https://editorconfig.org/)
 intended to set basic editor defaults which are intended to be suitable for all
 projects in all languages:
 
@@ -45,7 +45,7 @@ projects in all languages:
     highlighting extra whitespace and extra merge conflicts)
 
 Just copy it into your project's root directory and, if your editor doesn't have
-native support, [check for a plugin](http://editorconfig.org/#download).
+native support, [check for a plugin](https://editorconfig.org/#download).
 
 Where possible, configure tools to use `.editorconfig` rather than duplicating
 configuration in other files to avoid needing to synchronize customizations or
