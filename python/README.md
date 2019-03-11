@@ -34,8 +34,8 @@
 
 ### Code Style
 
-It is strongly recommended that you use [`isort`][isort] and [`black`][black]
-for consistency, and [`flake8`][flake8] to catch a variety of errors:
+This project shows how to use [`isort`][isort] and [`black`][black] for
+consistency, and [`flake8`][flake8] to catch a variety of errors:
 
     pip install flake8 isort black
 
@@ -53,7 +53,9 @@ indentation and whitespace settings in the other tools.
 
 Additional configuration for tools should be stored in tool-specific files (e.g.
 `.isort.cfg` or `.flake8`) or collected in a top-level `setup.cfg` but not both
-to avoid needing to synchronize updates.
+to avoid needing to synchronize updates. The `.isort.cfg` in this directory is
+configured to produce the same output as [`black`][black] to avoid needing to
+run both tools in the same order.
 
 For convenience, this repository has examples which follow Black's conventions
 for formatting and line-length (88 vs. 80 characters). These are intended as a
