@@ -12,6 +12,6 @@
 #foo {
     display: none;
 
-    /* This will trigger a stylelint error: */
-    made-up: bogus;
+    /* This will trigger a stylelint error which should be specifically disabled: */
+    made-up: bogus; /* stylelint-disable-line property-no-unknown */
 }
