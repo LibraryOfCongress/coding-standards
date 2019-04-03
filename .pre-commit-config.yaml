@@ -27,3 +27,11 @@ repos:
       hooks:
           - id: prettier
             files: \.(css|less|scss|ts|tsx|graphql|gql|json|js|jsx|md)$
+    - repo: https://github.com/pre-commit/mirrors-eslint
+      rev: v5.16.0
+      hooks:
+          - id: eslint
+            additional_dependencies:
+                - eslint@4.19.1
+                - eslint-plugin-prettier@2.7.0
+                - prettier@1.16.4
