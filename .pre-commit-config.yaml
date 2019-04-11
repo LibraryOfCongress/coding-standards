@@ -1,6 +1,6 @@
 repos:
     - repo: https://github.com/pre-commit/mirrors-isort
-      rev: v4.3.16
+      rev: v4.3.17
       hooks:
           - id: isort
     - repo: https://github.com/ambv/black
@@ -19,6 +19,7 @@ repos:
           - id: check-json
           - id: check-yaml
           - id: detect-aws-credentials
+            args: ['--allow-missing-credentials']
           - id: detect-private-key
           - id: pretty-format-json
             args: ["--autofix", "--no-sort-keys", "--indent=4"]
@@ -34,8 +35,8 @@ repos:
       hooks:
           - id: eslint
             additional_dependencies:
-                - eslint@4.19.1
-                - eslint-plugin-prettier@2.7.0
+                - eslint@5.16.0
+                - eslint-plugin-prettier@3.0.1
                 - prettier@1.16.4
     - repo: https://github.com/awebdeveloper/pre-commit-stylelint
       rev: 0.0.2
@@ -43,5 +44,5 @@ repos:
           - id: stylelint
             additional_dependencies:
                 - stylelint@9.10.1
-                - stylelint-config-prettier@3.3.0
+                - stylelint-config-prettier@5.0.0
                 - stylelint-config-recommended@2.1.0
