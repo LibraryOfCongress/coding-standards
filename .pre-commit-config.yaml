@@ -22,6 +22,8 @@ repos:
           - id: detect-private-key
           - id: pretty-format-json
             args: ["--autofix", "--no-sort-keys", "--indent=4"]
+          - id: check-ast
+          - id: debug-statements
     - repo: https://github.com/prettier/prettier
       rev: 1.16.4
       hooks:
