@@ -25,6 +25,8 @@ repos:
             args: ["--autofix", "--no-sort-keys", "--indent=4"]
           - id: check-ast
           - id: debug-statements
+          - id: check-added-large-files
+            args: ["--maxkb=128"]
     - repo: https://github.com/prettier/prettier
       rev: 1.16.4
       hooks:
