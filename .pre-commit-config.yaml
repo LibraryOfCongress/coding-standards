@@ -10,23 +10,23 @@ repos:
     - repo: https://github.com/pre-commit/pre-commit-hooks
       rev: v2.1.0
       hooks:
-          - id: check-byte-order-marker
-          - id: trailing-whitespace
-          - id: mixed-line-ending
-            args: ["--fix=lf"]
-          - id: check-merge-conflict
-          - id: flake8
-          - id: check-json
-          - id: check-yaml
-          - id: detect-aws-credentials
-            args: ['--allow-missing-credentials']
-          - id: detect-private-key
-          - id: pretty-format-json
-            args: ["--autofix", "--no-sort-keys", "--indent=4"]
-          - id: check-ast
-          - id: debug-statements
           - id: check-added-large-files
             args: ["--maxkb=128"]
+          - id: check-ast
+          - id: check-byte-order-marker
+          - id: check-json
+          - id: check-merge-conflict
+          - id: check-yaml
+          - id: debug-statements
+          - id: detect-aws-credentials
+            args: ["--allow-missing-credentials"]
+          - id: detect-private-key
+          - id: flake8
+          - id: mixed-line-ending
+            args: ["--fix=lf"]
+          - id: pretty-format-json
+            args: ["--autofix", "--no-sort-keys", "--indent=4"]
+          - id: trailing-whitespace
     - repo: https://github.com/prettier/prettier
       rev: 1.16.4
       hooks:
