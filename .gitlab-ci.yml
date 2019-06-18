@@ -1,13 +1,10 @@
-codequality:
-  tags:
-    - docker
-  image: docker:latest
-  services:
-    - docker:dind
-  before_script:
-    - docker info
-    - docker pull acdha/flake8-codeclimate
-  script:
-    - docker run --rm --volume "$PWD":/code acdha/flake8-codeclimate /code > codeclimate.json || true
-  artifacts:
-    paths: [codeclimate.json]
+precommit:
+    tags:
+        - docker
+    image: docker:latest
+    services:
+        - docker:dind
+    before_script:
+        - docker pull acdha/pre-commit
+    script:
+        - docker run --rm --volume "$PWD":/code acdha/pre-commit
