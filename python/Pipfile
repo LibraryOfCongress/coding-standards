@@ -7,6 +7,12 @@ verify_ssl = true
 black = "*"
 isort = "*"
 flake8 = "*"
+flake8-assertive = "*"
+flake8-builtins = "*"
+flake8-comprehensions = "*"
+flake8-logging-format = "*"
+flake8-bugbear = "*"
+flake8-eradicate = "*"
 
 [packages]
 
