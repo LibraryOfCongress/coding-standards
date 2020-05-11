@@ -4,7 +4,7 @@ var bar = "foobar";
 
 var baaz = {
     foo: bar,
-    quux: foo + bar
+    quux: foo + bar,
 };
 
 let quux = { foo: 1, bar: 2 };
