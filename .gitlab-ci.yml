@@ -3,7 +3,8 @@ precommit:
         - docker
     image: git.loc.gov/devops/dependency_proxy/containers/docker:latest
     services:
-        - docker:dind
+        - name: git.loc.gov/devops/dependency_proxy/containers/docker:dind
+          alias: docker
     before_script:
         - docker pull acdha/pre-commit
     script:
