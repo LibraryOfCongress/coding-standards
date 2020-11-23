@@ -4,7 +4,7 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-black = "*"
+black = "==20.8b1"
 isort = "*"
 flake8 = "*"
 flake8-assertive = "*"
@@ -13,11 +13,9 @@ flake8-comprehensions = "*"
 flake8-logging-format = "*"
 flake8-bugbear = "*"
 flake8-eradicate = "*"
+bandit = "*"
 
 [packages]
 
 [requires]
-python_version = "3.7"
-
-[pipenv]
-allow_prereleases = true
+python_version = "3.9"
