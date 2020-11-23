@@ -1,9 +1,9 @@
 precommit:
     tags:
         - docker
-    image: git.loc.gov/devops/dependency_proxy/containers/docker:latest
+    image: git.loc.gov:4567/devops/docker-hub-mirror/docker:latest
     services:
-        - name: git.loc.gov/devops/dependency_proxy/containers/docker:dind
+        - name: git.loc.gov:4567/devops/docker-hub-mirror/docker:dind
           alias: docker
     before_script:
         - docker pull acdha/pre-commit
