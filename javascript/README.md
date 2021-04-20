@@ -51,8 +51,8 @@ The provided [`.eslintrc.yaml`](.eslintrc.yaml) configures ESLint using the
 Prettier plugin for consistency. You can enable this for your projects or
 globally using either NPM or yarn:
 
-    npm add --only=dev prettier eslint eslint-plugin-prettier
-    yarn add --dev prettier eslint eslint-plugin-prettier
+    npm add --only=dev prettier eslint eslint-config-prettier
+    yarn add --dev prettier eslint eslint-config-prettier
 
 The provided configuration is intentionally limited to the most basic ESLint
 recommended defaults. Please consider the long-term maintenance cost of any

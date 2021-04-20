@@ -1,6 +1,6 @@
 root: true
-extends: eslint:recommended
-plugins:
+extends:
+    - eslint:recommended
     - prettier
 rules:
     indent:
