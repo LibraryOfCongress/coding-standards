@@ -1,11 +1,6 @@
-precommit:
-    tags:
-        - docker
-    image: git.loc.gov:4567/devops/docker-hub-mirror/docker:latest
-    services:
-        - name: git.loc.gov:4567/devops/docker-hub-mirror/docker:dind
-          alias: docker
-    before_script:
-        - docker pull acdha/pre-commit
-    script:
-        - docker run --rm --volume "$PWD":/code acdha/pre-commit
+stages:
+    - validate
+
+include:
+    - project: "DevOps/pre-commit-docker"
+      file: templates/pre-commit.yml

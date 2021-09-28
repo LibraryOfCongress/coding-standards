@@ -107,7 +107,7 @@ https://python-future.org/futurize.html#forwards-conversion-stage1
     ```python
     from io import open
 
-    open(filename, encoding='utf-8')
+    open(filename, encoding="utf-8")
     ```
 
     See https://python-future.org/compatible_idioms.html#file-io-with-open
