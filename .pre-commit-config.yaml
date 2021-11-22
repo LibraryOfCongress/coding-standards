@@ -4,8 +4,8 @@ repos:
       rev: v5.9.3
       hooks:
           - id: isort
-    - repo: https://github.com/ambv/black
-      rev: 21.9b0
+    - repo: https://github.com/psf/black
+      rev: 21.11b1
       hooks:
           - id: black
     - repo: https://github.com/pre-commit/pre-commit-hooks
@@ -39,7 +39,7 @@ repos:
           - id: prettier
             files: \.(css|less|scss|ts|tsx|graphql|gql|js|jsx|md|yml|yaml)$
     - repo: https://github.com/pre-commit/mirrors-eslint
-      rev: v7.32.0
+      rev: v8.3.0
       hooks:
           - id: eslint
             additional_dependencies:
@@ -74,10 +74,10 @@ repos:
             args: ["--baseline", ".secrets.baseline"]
             exclude: ".*/Pipfile.*"
     - repo: https://github.com/gruntwork-io/pre-commit
-      rev: v0.1.15
+      rev: v0.1.17
       hooks:
           - id: shellcheck
     - repo: https://github.com/asottile/blacken-docs
-      rev: v1.11.0
+      rev: v1.12.0
       hooks:
           - id: blacken-docs
