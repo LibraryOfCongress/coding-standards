@@ -67,12 +67,6 @@ repos:
                 - flake8-logging-format
                 - flake8-eradicate
                 - flake8-bugbear
-    - repo: https://github.com/Yelp/detect-secrets
-      rev: v1.1.0
-      hooks:
-          - id: detect-secrets
-            args: ["--baseline", ".secrets.baseline"]
-            exclude: ".*/Pipfile.*"
     - repo: https://github.com/gruntwork-io/pre-commit
       rev: v0.1.17
       hooks:

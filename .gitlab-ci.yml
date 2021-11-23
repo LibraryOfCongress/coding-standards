@@ -1,6 +1,8 @@
 stages:
     - validate
+    - test
 
 include:
+    - template: Security/Secret-Detection.gitlab-ci.yml
     - project: "DevOps/pre-commit-docker"
       file: templates/pre-commit.yml
