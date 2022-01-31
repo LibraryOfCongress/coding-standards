@@ -3,4 +3,4 @@ from __future__ import absolute_import, division, print_function
 
 
 def hello_world():
-    return u"Hello World"
+    return "Hello World"
