@@ -38,11 +38,11 @@ The top-level `.editorconfig` file is [Editor Config](https://editorconfig.org/)
 intended to set basic editor defaults which are intended to be suitable for all
 projects in all languages:
 
--   UTF-8 encoding
--   Unix line-termination
--   Spaces for indentation with a tab size of 4
--   Trailing whitespace is automatically trimmed (this will avoid Git
-    highlighting extra whitespace and extra merge conflicts)
+- UTF-8 encoding
+- Unix line-termination
+- Spaces for indentation with a tab size of 4
+- Trailing whitespace is automatically trimmed (this will avoid Git
+  highlighting extra whitespace and extra merge conflicts)
 
 Just copy it into your project's root directory and, if your editor doesn't have
 native support, [check for a plugin](https://editorconfig.org/#download).
@@ -53,14 +53,14 @@ exceptions.
 
 # General Practices
 
--   We strongly recommend the use of version control hooks and continuous
-    integration tests for any change which can be made or tested automatically.
-    This repository uses [`pre-commit`](https://pre-commit.com/) to manage Git
-    pre-commit hooks for several languages. This makes it simple to setup a new
-    copy of the repository by running `pre-commit install` after the first
-    checkout to ensure that all subsequent commits will be reformatted and
-    validated automatically, and CI tools can use `pre-commit run` to run all of
-    the configured hooks during the build process as well.
+- We strongly recommend the use of version control hooks and continuous
+  integration tests for any change which can be made or tested automatically.
+  This repository uses [`pre-commit`](https://pre-commit.com/) to manage Git
+  pre-commit hooks for several languages. This makes it simple to setup a new
+  copy of the repository by running `pre-commit install` after the first
+  checkout to ensure that all subsequent commits will be reformatted and
+  validated automatically, and CI tools can use `pre-commit run` to run all of
+  the configured hooks during the build process as well.
 
     There are a number of similar tools which provide equivalent functionality.
     In accordance with the [philosophy](#Philosophy) above, consistency is more

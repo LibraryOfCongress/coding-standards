@@ -1,12 +1,9 @@
-# encoding: utf-8
 # This is the sort order enforced by isort: future, stdlib, third-party, first-party:
-from __future__ import absolute_import, division, print_function
 
 from functools import partial
 
-from requests import session
-
 from example_utils import hello_world
+from requests import session
 
 unused_session = partial(session)
 

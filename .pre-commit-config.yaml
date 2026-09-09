@@ -1,20 +1,12 @@
 exclude: ".*/vendor/.*"
 repos:
-    - repo: https://github.com/pre-commit/mirrors-isort
-      rev: v5.10.1
-      hooks:
-          - id: isort
-    - repo: https://github.com/psf/black
-      rev: 23.7.0
-      hooks:
-          - id: black
     - repo: https://github.com/pre-commit/pre-commit-hooks
-      rev: v4.4.0
+      rev: 3e8a8703264a2f4a69428a0aa4dcb512790b2c8c # frozen: v6.0.0
       hooks:
           - id: check-added-large-files
             args: ["--maxkb=256"]
           - id: check-ast
-          - id: check-byte-order-marker
+          - id: fix-byte-order-marker
           - id: check-case-conflict
           - id: check-docstring-first
           - id: check-executables-have-shebangs
@@ -33,45 +25,39 @@ repos:
           - id: pretty-format-json
             args: ["--autofix", "--no-sort-keys", "--indent=4"]
           - id: trailing-whitespace
-    - repo: https://github.com/pre-commit/mirrors-prettier
-      rev: v3.0.3
+    - repo: https://github.com/astral-sh/ruff-pre-commit
+      rev: 1f1e8bf348ff38fc88619a38d3ca4d9c56abea49 # frozen: v0.16.5
       hooks:
-          - id: prettier
-            files: \.(css|less|scss|ts|tsx|graphql|gql|js|jsx|md|yml|yaml)$
-    - repo: https://github.com/pre-commit/mirrors-eslint
-      rev: v8.48.0
-      hooks:
-          - id: eslint
-            additional_dependencies:
-                - eslint@^8.48
-                - eslint-config-prettier@^9.0
-                - prettier@^3.0
-    - repo: https://github.com/awebdeveloper/pre-commit-stylelint
-      rev: 0.0.2
-      hooks:
-          - id: stylelint
-            additional_dependencies:
-                - prettier@^3.0
-                - stylelint@^14.3
-                - stylelint-config-recommended@^6.0
-                - stylelint-config-prettier@^9.0
-    - repo: https://github.com/pycqa/flake8
-      rev: 6.1.0
-      hooks:
-          - id: flake8
-            args: [--config=python/setup.cfg]
-            additional_dependencies:
-                - flake8-assertive
-                - flake8-builtins
-                - flake8-comprehensions
-                - flake8-logging-format
-                - flake8-eradicate
-                - flake8-bugbear
+          - id: ruff-check
+            args: ["--fix", "--exit-non-zero-on-fix"]
+          - id: ruff-format
     - repo: https://github.com/gruntwork-io/pre-commit
-      rev: v0.1.22
+      rev: 40f924cd642f5dc98d12bd97b07f3752223553da # frozen: v0.1.30
       hooks:
           - id: shellcheck
     - repo: https://github.com/asottile/blacken-docs
-      rev: 1.16.0
+      rev: fda77690955e9b63c6687d8806bafd56a526e45f # frozen: 1.20.0
       hooks:
           - id: blacken-docs
+    - repo: local
+      hooks:
+          - id: prettier
+            name: prettier
+            language: system
+            entry: npx --yes prettier --write --ignore-unknown
+            types_or: [css, markdown, javascript, jsx, ts, tsx, html]
+            pass_filenames: true
+          - id: eslint
+            name: eslint
+            language: system
+            entry: npx --yes eslint
+            types_or: [javascript, jsx, ts, tsx]
+            exclude_types:
+                - json
+            pass_filenames: true
+          - id: stylelint
+            name: stylelint
+            language: system
+            entry: npx --yes stylelint
+            types_or: [css, scss]
+            pass_filenames: true
